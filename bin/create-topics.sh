@@ -9,5 +9,5 @@ topics="src-topic patterns rewards purchases stocks stocks-out transaction-summa
 
 for topic in ${topics}; do
      echo "attempting to create topic ${topic}"
-     ${KAFKA_HOME}/bin/kafka-topics.sh --create --topic ${topic} --partitions 1 --replication-factor 1 --zookeeper ${ZK_HOST}:${ZK_PORT}
+     kafka-topics --create --topic ${topic} --partitions 1 --replication-factor 1 --zookeeper ${ZK_HOST}:${ZK_PORT}
 done
